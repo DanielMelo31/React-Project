@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './styles/App.css';
-import borderCollie from './media/borderCollie.jpg'
-import rhodesian from './media/rhodesian.jpg'
-import appLogo from './media/logo.png'
+import borderCollie from './media/borderCollie.jpg';
+import rhodesian from './media/rhodesian.jpg';
+import appLogo from './media/logo.png';
 
 function App() {
 	return (
@@ -33,18 +33,8 @@ function App() {
 				<section>
 					<h1>Razas de Perros</h1>
 					<ul class="breedCardContainer">
-						<li class="breedCard">
-							<div class="contenedorImagen">
-								<img src={borderCollie} alt="Border Collie" />
-							</div>
-							<span class="breedTitle">Border Collie </span>
-						</li>
-						<li class="breedCard">
-							<div class="contenedorImagen">
-								<img src={rhodesian} alt="Border Collie" />
-							</div>
-							<span class="breedTitle">Rhodesian</span>
-						</li>
+						<MainDogCard name="BorderCollie" image={borderCollie}/>
+						<MainDogCard name="Rhodesian" image={rhodesian}/>
 					</ul>
 				</section>
 				<section></section>
@@ -54,4 +44,14 @@ function App() {
 	);
 }
 
+function MainDogCard(props) {
+	return (
+		<li class="breedCard">
+			<div class="contenedorImagen">
+				<img src={props.image} alt="Border Collie" />
+			</div>
+			<span class="breedTitle">{props.name}</span>
+		</li>
+	)
+}
 export default App;
