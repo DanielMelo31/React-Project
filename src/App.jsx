@@ -44,7 +44,7 @@ function App() {
 	);
 }
 
-function MainDogCard(props) {
+const MainDogCard = (props) => {
 	return (
 		<li class="breedCard">
 			<div class="contenedorImagen">
